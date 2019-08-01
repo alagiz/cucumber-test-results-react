@@ -1,0 +1,86 @@
+.feature-tile {
+    display: flex;
+    flex: 0 0 365px;
+    width: 172px;
+    height: 130px;
+    margin: 8px;
+    overflow: hidden;
+    box-shadow: -3px 3px 2px 0 #0E2844;
+    border: 1px solid #0E2844;
+    cursor: pointer;
+}
+
+.feature-tile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 30;
+    width: 100%;
+    padding: 0.3em;
+    overflow: hidden;
+}
+
+.passed {
+    background: #68CA77;
+}
+
+.failed {
+    background: #C73F4B;
+    color: white;
+}
+
+.feature-tile-upper {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.3em 0 0 0.3em;
+}
+
+.feature-tile-middle {
+    padding: 0 0 0 0.3em;
+}
+
+.failed-step-name, .failed-scenario-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.feature-tile-downer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.3em 0 0.3em;
+}
+
+.dashboard-name {
+    word-break: break-all;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    margin-top: -0.2em;
+}
+
+.number-of-scenarios {
+    display: flex;
+    flex: 1;
+    padding: 0.5em;
+}
+
+.feature-tile-scenario-name, .feature-tile-statistics-duration {
+    font-weight: bold;
+    margin-left: 0.2em;
+}
+
+.feature-tile-statistics {
+    display: flex;
+}
+
+.duration {
+    display: flex;
+    flex-direction: row;
+}
+
+.label {
+    margin-right: 0.2em;
+}

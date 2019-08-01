@@ -1,0 +1,10 @@
+.info-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: #68CA77;
+    margin-right: 0.3vw;
+    font-size: 1.3em;
+    height: 1.2em;
+}

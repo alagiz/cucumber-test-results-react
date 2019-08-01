@@ -1,0 +1,59 @@
+{
+    "$id": "test",
+    "title": "test",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "elements",
+            "name",
+            "id"
+        ],
+        "properties": {
+            "elements": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": [
+                        "name",
+                        "steps"
+                    ],
+                    "properties": {
+                        "steps": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "result",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "result": {
+                                        "type": "object",
+                                        "required": [
+                                            "status"
+                                        ],
+                                        "properties": {
+                                            "duration": {
+                                                "type": "number",
+                                                "minimum": 0
+                                            },
+                                            "status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "passed",
+                                                    "failed",
+                                                    "skipped"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

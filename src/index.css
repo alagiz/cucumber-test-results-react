@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "custom-font";
+    /*font-family: "Dubai Light";*/
+    /*font-family: "Lao UI";*/
+    /*font-family: Cambria;*/
+    /*font-family:"Franklin Gothic Book";*/
+    /*font-family: "Bookman Old Style";*/
+    /*font-family: sans-serif;*/
+    background: #5C7A94;
+}
+
+@font-face {
+    font-family: 'custom-font';
+    src: url('./fonts/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

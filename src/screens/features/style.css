@@ -1,0 +1,76 @@
+.features {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-tile-bottom {
+    width: 100%;
+}
+
+.info-tile-bottom-item-ellipsed {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.info-tile-bottom-item-value {
+    font-size: 1.5em;
+}
+
+.info-tile-bottom-text {
+    font-size: 1.7em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.info-tile-bottom-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 8vw;
+}
+
+.info-tile-bottom-text-csharp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info-tile-bottom-text-circle {
+    width: 40%;
+}
+
+.CircularProgressbar {
+    width: 100%;
+    max-width: 24%;
+    align-self: center;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+    stroke: #C73F4B;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+    stroke: #68CA77;
+    stroke-linecap: square;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+    fill: #68CA77;
+}
+
+.test-status {
+    display: flex;
+    justify-content: center;
+    width: 311px;
+    align-self: center;
+}
+
+.fa-ban {
+    color: #C73F4B;
+}

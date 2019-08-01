@@ -1,0 +1,177 @@
+[
+    {
+        "name": "feature 0",
+        "id": "feature-0",
+        "elements": [
+            {
+                "name": "element 0",
+                "steps": [
+                    {
+                        "name": "step 0",
+                        "result": {
+                            "status": "passed",
+                            "duration": 1
+                        }
+                    },
+                    {
+                        "name": "step 1",
+                        "result": {
+                            "status": "skipped"
+                        }
+                    },
+                    {
+                        "name": "step 2",
+                        "result": {
+                            "status": "failed",
+                            "duration": 2
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "element 1",
+                "steps": [
+                    {
+                        "name": "step 0",
+                        "result": {
+                            "status": "passed",
+                            "duration": 28
+                        }
+                    },
+                    {
+                        "name": "step 2",
+                        "result": {
+                            "status": "failed",
+                            "duration": 22
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "feature 1",
+        "id": "feature-1",
+        "elements": [
+            {
+                "name": "element 0",
+                "steps": [
+                    {
+                        "name": "step 0",
+                        "result": {
+                            "status": "failed",
+                            "duration": 1
+                        }
+                    },
+                    {
+                        "name": "step 1",
+                        "result": {
+                            "status": "failed",
+                            "duration": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "element 1",
+                "steps": [
+                    {
+                        "name": "step 0",
+                        "result": {
+                            "status": "passed",
+                            "duration": 11
+                        }
+                    },
+                    {
+                        "name": "step 2",
+                        "result": {
+                            "status": "passed",
+                            "duration": 22
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "feature 2",
+        "id": "feature-2",
+        "elements": [
+            {
+                "name": "element 0",
+                "steps": [
+                    {
+                        "name": "step 0",
+                        "result": {
+                        }
+                    },
+                    {
+                        "name": "step 1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "feature 3",
+        "id": "feature-3",
+        "elements": [
+            {
+                "name": "element 0",
+                "steps": [
+                    {
+                        "name": "step 0",
+                        "result": {
+                            "status": "skipped",
+                            "duration": 14
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "feature 4",
+        "id": "feature-4",
+        "elements": [
+            {
+                "name": "element 0",
+                "steps": [
+                    {
+                        "name": "step 0",
+                        "result": {
+                            "status": "passed",
+                            "duration": 14
+                        }
+                    },
+                    {
+                        "name": "step 1",
+                        "result": {
+                            "status": "passed",
+                            "duration": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "element 1",
+                "steps": [
+                    {
+                        "name": "step 0",
+                        "result": {
+                            "status": "passed",
+                            "duration": 2
+                        }
+                    },
+                    {
+                        "name": "step 1",
+                        "result": {
+                            "status": "passed",
+                            "duration": 24
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

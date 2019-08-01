@@ -1,0 +1,13 @@
+.scenario-list {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: calc(100vh - 10.75em);
+    padding-left: 0.8em;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.scenario-list-container{
+    padding-bottom: 0.3em;
+}

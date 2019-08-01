@@ -1,0 +1,18 @@
+.validation-error {
+    display: flex;
+    margin: 0.2em;
+    box-shadow: -0.1875rem 0.1875rem 0.125rem 0 #ccc;
+    border: 0.0625rem solid #bdbdbd;
+    min-height: 1.6em;
+}
+
+.validation-error-item {
+    display: flex;
+    margin: 0.2em 1em 0.2em 0.2em;
+}
+
+.error-label {
+    margin-right: 0.3em;
+    font-weight: bold;
+    color: red;
+}

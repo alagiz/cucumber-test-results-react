@@ -1,0 +1,35 @@
+.feature-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0E2844;
+    height: 5em;
+    padding: 1.5em;
+    color: white;
+    overflow: hidden;
+}
+
+.feature-name-status-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-name-status {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: -0.8em;
+    margin-top: 0.5em;
+}
+
+.feature-name {
+    font-size: 2em;
+    margin-left: 0.3em;
+}
+
+.tests-passed {
+    color: #68CA77;
+}
+
+.tests-failed {
+    color: #C73F4B;
+}

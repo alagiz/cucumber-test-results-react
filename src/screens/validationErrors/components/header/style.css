@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0E2844;
+    height: 5em;
+    padding: 1.5em;
+    color: white;
+    overflow: hidden;
+}
+
+.header-title {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.header-title-container {
+    font-size: 2em;
+    margin-top: -0.5em;
+}
+
+.cucumber-logo-errors {
+    max-height: 245%;
+    transform: rotate(313deg);
+    position: relative;
+    width: 9em;
+    top: 0.5em;
+}

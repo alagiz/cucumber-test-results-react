@@ -1,0 +1,37 @@
+.info-panel-legend {
+    display: flex;
+    font-size: 1.3em;
+    margin-top: 0.2em;
+    align-self: end;
+    color: white;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.features-info-panel-title {
+    display: flex;
+    align-items: center;
+    margin-left: 0.4em;
+}
+
+.legend-item-container {
+    display: flex;
+}
+
+.square {
+    width: 1em;
+    height: 1em;
+    margin-left: 1.5em;
+    margin-right: 0.4em;
+}
+
+.passed {
+    background: #68CA77;
+}
+
+.failed {
+    background: #C73F4B;
+}

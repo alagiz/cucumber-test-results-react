@@ -1,0 +1,23 @@
+.feature {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #68CA77;
+    margin-right: 0.3vw;
+    font-size: 1.3em;
+    height: 1.2em;
+}
+
+.tests-passed {
+    color: #68CA77;
+}
+
+.tests-failed {
+    color: #C73F4B;
+}

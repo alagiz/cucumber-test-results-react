@@ -1,0 +1,38 @@
+.extra-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5em 0.3em 0.3em;
+}
+
+.info-tiles-container {
+    display: flex;
+    width: 28.5%;
+    background: #0E2844;
+}
+
+.services-health-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    height: 120px;
+    width: 70.5%;
+    background: #0E2844;
+    padding-top: 6px;
+    overflow: hidden;
+}
+
+.services-health-status-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background: #0E2844;
+    padding-top: 6px;
+    overflow: auto;
+}
+
+.services-health-title {
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+}

@@ -1,0 +1,2160 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Successful Authentication",
+        "description": "",
+        "id": "gateway-authentication;successful-authentication",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4495582300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I post username and password to \"/authenticate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/authenticate",
+                  "offset": 33
+                }
+              ],
+              "location": "Gateway.iPostUsernameAndPasswordTo(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2125200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "send wrong username and password",
+        "description": "",
+        "id": "gateway-authentication;send-wrong-username-and-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1014663500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I post dummy username and password to \"/authenticate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/authenticate",
+                  "offset": 39
+                }
+              ],
+              "location": "Gateway.iPostDummyUsernameAndPasswordTo(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 319000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I verify if result code in response equals \"401\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "gateway_authentication",
+    "description": "",
+    "id": "gateway-authentication",
+    "keyword": "Feature",
+    "uri": "src/test/features/gateway_authentication.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "Successful Authentication",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3800805900,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I post username and password to \"/authenticate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/authenticate",
+                  "offset": 33
+                }
+              ],
+              "location": "Gateway.iPostUsernameAndPasswordTo(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 247700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "verify data_selection_product_layers query results",
+        "description": "",
+        "id": "data-selection;verify-data-selection-product-layers-query-results",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 37515400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I send a GET Request to \"/data_selection/product_layers/\" with the parameters \"startDate\u003d2017-01-02%2013:00\u0026endDate\u003d2017-01-02%2014:00\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/data_selection/product_layers/",
+                  "offset": 25
+                },
+                {
+                  "val": "startDate\u003d2017-01-02%2013:00\u0026endDate\u003d2017-01-02%2014:00",
+                  "offset": 79
+                }
+              ],
+              "location": "Gateway.iSendAGETRequestToWithTheParameters(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 236000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8956400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I verify the results for \"/data_selection/product_layers/\" as JSON Array",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/data_selection/product_layers/",
+                  "offset": 26
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultsForAsJSONArray(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 2,
+        "name": "Successful Authentication",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3774231300,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I post username and password to \"/authenticate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/authenticate",
+                  "offset": 33
+                }
+              ],
+              "location": "Gateway.iPostUsernameAndPasswordTo(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 262000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "verify data_selection_lot_wafers query results",
+        "description": "",
+        "id": "data-selection;verify-data-selection-lot-wafers-query-results",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 50712700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I send a GET Request to \"/data_selection/lot_wafers/\" with the parameters \"startDate\u003d2017-01-02%2013:00\u0026endDate\u003d2017-01-02%2014:00\u0026productId\u003dProduct_1X\u0026layerId\u003dLayer32\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/data_selection/lot_wafers/",
+                  "offset": 25
+                },
+                {
+                  "val": "startDate\u003d2017-01-02%2013:00\u0026endDate\u003d2017-01-02%2014:00\u0026productId\u003dProduct_1X\u0026layerId\u003dLayer32",
+                  "offset": 75
+                }
+              ],
+              "location": "Gateway.iSendAGETRequestToWithTheParameters(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 223200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[7fda8584c483e8ff1217e10c19de936c]\u003e but was:\u003c[1eb45a9509bfe91cc202efba23dda22e]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat Annotation.Gateway.iVerifyTheResultsFor(Gateway.java:79)\r\n\tat ✽.I verify the results for \"/data_selection/lot_wafers/\"(src/test/features/gateway_dataselection.feature:19)\r\n",
+              "duration": 14337100,
+              "status": "failed"
+            },
+            "line": 19,
+            "name": "I verify the results for \"/data_selection/lot_wafers/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/data_selection/lot_wafers/",
+                  "offset": 26
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultsFor(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Data Selection",
+    "description": "",
+    "id": "data-selection",
+    "keyword": "Feature",
+    "uri": "src/test/features/gateway_dataselection.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "Successful Authentication",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3829388900,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I post username and password to \"/authenticate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/authenticate",
+                  "offset": 33
+                }
+              ],
+              "location": "Gateway.iPostUsernameAndPasswordTo(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 234700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "verify waferplot_load_plot_data query results",
+        "description": "",
+        "id": "wafer-plot;verify-waferplot-load-plot-data-query-results",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 94018900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I send a GET Request to \"/load_plot_data/\" with the parameters \"wmsid\u003d3186\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/load_plot_data/",
+                  "offset": 25
+                },
+                {
+                  "val": "wmsid\u003d3186",
+                  "offset": 64
+                }
+              ],
+              "location": "Gateway.iSendAGETRequestToWithTheParameters(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 277200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 323282600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I send a GET Request to \"/compute/\" with the result from \"/load_plot_data/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/compute/",
+                  "offset": 25
+                },
+                {
+                  "val": "/load_plot_data/",
+                  "offset": 58
+                }
+              ],
+              "location": "Gateway.iSendAGETRequestToWithTheResultFrom(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 204300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 79848000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I send a GET Request to \"/wafer_plots/show/\" with the result from \"/compute/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/wafer_plots/show/",
+                  "offset": 25
+                },
+                {
+                  "val": "/compute/",
+                  "offset": 67
+                }
+              ],
+              "location": "Gateway.iSendAGETRequestToWithTheResultFrom(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 238100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 33003700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I verify the results for \"/wafer_plots/show/2\" as JSON",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/wafer_plots/show/2",
+                  "offset": 26
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultsForAsJSON(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Wafer Plot",
+    "description": "",
+    "id": "wafer-plot",
+    "keyword": "Feature",
+    "uri": "src/test/features/gateway_flyerremoval.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "Successful Authentication",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4125111000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I post username and password to \"/authenticate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/authenticate",
+                  "offset": 33
+                }
+              ],
+              "location": "Gateway.iPostUsernameAndPasswordTo(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 236400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "verify waferplot_load_plot_data query results",
+        "description": "",
+        "id": "wafer-plot;verify-waferplot-load-plot-data-query-results",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 89200200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I send a GET Request to \"/wafer_plots/show/\" with the parameters \"wmsid\u003d2895\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/wafer_plots/show/",
+                  "offset": 25
+                },
+                {
+                  "val": "wmsid\u003d2895",
+                  "offset": 66
+                }
+              ],
+              "location": "Gateway.iSendAGETRequestToWithTheParameters(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 467500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19097000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I verify the results for \"/wafer_plots/show/\" as JSON",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/wafer_plots/show/",
+                  "offset": 26
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultsForAsJSON(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 2,
+        "name": "Successful Authentication",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3878416000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I post username and password to \"/authenticate\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/authenticate",
+                  "offset": 33
+                }
+              ],
+              "location": "Gateway.iPostUsernameAndPasswordTo(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 209800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "verify waferplot_screenshot query results",
+        "description": "",
+        "id": "wafer-plot;verify-waferplot-screenshot-query-results",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 32845700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I send a GET Request to \"/wafer_plots/screenshot/\" with the parameters \"wmsid\u003d2895\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/wafer_plots/screenshot/",
+                  "offset": 25
+                },
+                {
+                  "val": "wmsid\u003d2895",
+                  "offset": 72
+                }
+              ],
+              "location": "Gateway.iSendAGETRequestToWithTheParameters(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 250000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I verify if result code in response equals \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "Gateway.iVerifyTheResultCodeFor(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20546100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I verify the binary results for \"/wafer_plots/screenshot/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/wafer_plots/screenshot/",
+                  "offset": 33
+                }
+              ],
+              "location": "Gateway.iVerifyTheBinaryResultsFor(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Wafer Plot",
+    "description": "",
+    "id": "wafer-plot",
+    "keyword": "Feature",
+    "uri": "src/test/features/gateway_waferplot.feature",
+    "tags": []
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "I am at the login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2764207700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am at the Login page",
+            "match": {
+              "location": "Authentication.i_am_at_the_Login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3560881400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseAnnotation.loadBrowser()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Successful Authentication",
+        "description": "",
+        "id": "selenium-authentication;successful-authentication",
+        "after": [
+          {
+            "result": {
+              "duration": 646471900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseAnnotation.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 198307400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter username of authorised user",
+            "match": {
+              "location": "Authentication.i_enter_username_of_authorised_user()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17572400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I see the username of authorised user in the username textbox",
+            "match": {
+              "location": "Authentication.iSeeTheUsernameOfAuthorisedUserInTheUsernameTextbox()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 169840800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I enter password of authorised user",
+            "match": {
+              "location": "Authentication.i_enter_password_of_authorised_user()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 104760800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I click the login button",
+            "match": {
+              "location": "Authentication.iClickTheLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3926709400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I am at the Landing Page",
+            "match": {
+              "location": "DataSelection.iAmAtTheLandingPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4209824900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I choose to logout",
+            "match": {
+              "location": "DataSelection.i_choose_to_logout()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2051507500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I am at the Login page",
+            "match": {
+              "location": "Authentication.i_am_at_the_Login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumFeature"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "I am at the login page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2771854100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am at the Login page",
+            "match": {
+              "location": "Authentication.i_am_at_the_Login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3062008400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseAnnotation.loadBrowser()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Wrong Authentication",
+        "description": "",
+        "id": "selenium-authentication;wrong-authentication",
+        "after": [
+          {
+            "result": {
+              "duration": 655988700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseAnnotation.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 337036400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I enter username of authorised user",
+            "match": {
+              "location": "Authentication.i_enter_username_of_authorised_user()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16210600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I see the username of authorised user in the username textbox",
+            "match": {
+              "location": "Authentication.iSeeTheUsernameOfAuthorisedUserInTheUsernameTextbox()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 110771100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I enter empty password",
+            "match": {
+              "location": "Authentication.i_enter_empty_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 99335400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I click the login button",
+            "match": {
+              "location": "Authentication.iClickTheLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9456877600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the login error message",
+            "match": {
+              "location": "Authentication.iSeeTheLoginErrorMessage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumFeature"
+          }
+        ]
+      }
+    ],
+    "name": "selenium authentication",
+    "description": "",
+    "id": "selenium-authentication",
+    "keyword": "Feature",
+    "uri": "src/test/features/s_authentication.feature",
+    "tags": [
+      {
+        "name": "@SeleniumFeature",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "I am logged in and at the landing page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2752797900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am at the Login page",
+            "match": {
+              "location": "Authentication.i_am_at_the_Login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 201702700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter username of authorised user",
+            "match": {
+              "location": "Authentication.i_enter_username_of_authorised_user()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20660600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I see the username of authorised user in the username textbox",
+            "match": {
+              "location": "Authentication.iSeeTheUsernameOfAuthorisedUserInTheUsernameTextbox()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 179180600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter password of authorised user",
+            "match": {
+              "location": "Authentication.i_enter_password_of_authorised_user()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 119158600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click the login button",
+            "match": {
+              "location": "Authentication.iClickTheLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5362580400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am at the Landing Page",
+            "match": {
+              "location": "DataSelection.iAmAtTheLandingPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2174258700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I click on the date range field",
+            "match": {
+              "location": "DataSelection.iClickOnTheDateRangeField()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2252780600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I select start date \"2017-01-02 13:00\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2017-01-02 13:00",
+                  "offset": 21
+                }
+              ],
+              "location": "DataSelection.iSelectStartDate(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2174271100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I select end date \"2017-01-02 14:00\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2017-01-02 14:00",
+                  "offset": 19
+                }
+              ],
+              "location": "DataSelection.iSelectEndDate(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 112199700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I click the Data Selection confirmation button",
+            "match": {
+              "location": "DataSelection.iClickTheDataSelectionConfirmationButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2176559200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I select product \"Product_1X\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Product_1X",
+                  "offset": 18
+                }
+              ],
+              "location": "DataSelection.iSelectProduct(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2148025100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I select layer: \"Layer32\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Layer32",
+                  "offset": 17
+                }
+              ],
+              "location": "DataSelection.iSelectLayer(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2087733900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I click the Submit button",
+            "match": {
+              "location": "DataSelection.iClickTheSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17358074400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I select points by rectangle starting from x: \"1\" y: \"1\" moving by x: \"963\" and y: \"268\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 47
+                },
+                {
+                  "val": "1",
+                  "offset": 54
+                },
+                {
+                  "val": "963",
+                  "offset": 71
+                },
+                {
+                  "val": "268",
+                  "offset": 84
+                }
+              ],
+              "location": "DataSelection.iSelectPointsByRectangleStartingFromXYMovingByXAndY(String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 231490000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I click on computation Page link",
+            "match": {
+              "location": "DataSelection.iClickOnComputationPageLink()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3105208000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseAnnotation.loadBrowser()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "select a wafer",
+        "description": "",
+        "id": "selenium-data-selection;select-a-wafer",
+        "after": [
+          {
+            "result": {
+              "duration": 669795300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseAnnotation.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2147826900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I am at the Computation page",
+            "match": {
+              "location": "Computation.iAmAtTheComputationPage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2038252200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I can see the Lot \"Lot6399\" in the treeview",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Lot6399",
+                  "offset": 19
+                }
+              ],
+              "location": "Computation.iCanSeeTheLotInTheTreeview(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2110294800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I can see the Wafer \"wafer.3152974802\" in lot \"Lot6399\" in the treeview",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974802",
+                  "offset": 21
+                },
+                {
+                  "val": "Lot6399",
+                  "offset": 47
+                }
+              ],
+              "location": "Computation.iCanSeeTheWaferInLotInTheTreeview(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2215491100,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I click on the Wafer \"wafer.3152974802\" in lot \"Lot6399\" in the treeview",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974802",
+                  "offset": 22
+                },
+                {
+                  "val": "Lot6399",
+                  "offset": 48
+                }
+              ],
+              "location": "Computation.iClickOnTheWaferInLotInTheTreeview(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 498289000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I can see a stats table for wafer \"wafer.3152974802\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974802",
+                  "offset": 35
+                }
+              ],
+              "location": "Computation.iCanSeeAStatsTableForWafer(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12127290400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I verify the download to wafer \"wafer.3152974802\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974802",
+                  "offset": 32
+                }
+              ],
+              "location": "Computation.iVerifyTheDownloadToWafer(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7008180100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I click Apply Decorrection tool",
+            "match": {
+              "location": "Computation.iClickTool()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5878456100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I click Apply Flyer removal tool",
+            "match": {
+              "location": "Computation.iClickApplyFlyerRemovalTool()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5872683800,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I click Apply Modeling tool",
+            "match": {
+              "location": "Computation.iClickApplyModelingTool()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 460506500,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I click on the result for \"Decorrection\" for Wafer \"wafer.3152974802\" in lot \"Lot6399\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Decorrection",
+                  "offset": 27
+                },
+                {
+                  "val": "wafer.3152974802",
+                  "offset": 52
+                },
+                {
+                  "val": "Lot6399",
+                  "offset": 78
+                }
+              ],
+              "location": "Computation.iClickOnTheResultForForWaferInLot(String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12136807100,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I verify the download to wafer \"wafer.3152974802_Decorrection\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974802_Decorrection",
+                  "offset": 32
+                }
+              ],
+              "location": "Computation.iVerifyTheDownloadToWafer(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 483248000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I click on the result for \"Filter\" for Wafer \"wafer.3152974802\" in lot \"Lot6399\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Filter",
+                  "offset": 27
+                },
+                {
+                  "val": "wafer.3152974802",
+                  "offset": 46
+                },
+                {
+                  "val": "Lot6399",
+                  "offset": 72
+                }
+              ],
+              "location": "Computation.iClickOnTheResultForForWaferInLot(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12124316500,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I verify the download to wafer \"wafer.3152974802_Filter\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974802_Filter",
+                  "offset": 32
+                }
+              ],
+              "location": "Computation.iVerifyTheDownloadToWafer(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 353523700,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I click on the result for \"Correctable\" for Wafer \"wafer.3152974802\" in lot \"Lot6399\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Correctable",
+                  "offset": 27
+                },
+                {
+                  "val": "wafer.3152974802",
+                  "offset": 51
+                },
+                {
+                  "val": "Lot6399",
+                  "offset": 77
+                }
+              ],
+              "location": "Computation.iClickOnTheResultForForWaferInLot(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12161313700,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I verify the download to wafer \"wafer.3152974802_Correctable\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974802_Correctable",
+                  "offset": 32
+                }
+              ],
+              "location": "Computation.iVerifyTheDownloadToWafer(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 363681300,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "I click on the result for \"Residual\" for Wafer \"wafer.3152974802\" in lot \"Lot6399\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Residual",
+                  "offset": 27
+                },
+                {
+                  "val": "wafer.3152974802",
+                  "offset": 48
+                },
+                {
+                  "val": "Lot6399",
+                  "offset": 74
+                }
+              ],
+              "location": "Computation.iClickOnTheResultForForWaferInLot(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12150696000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I verify the download to wafer \"wafer.3152974802_Residual\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974802_Residual",
+                  "offset": 32
+                }
+              ],
+              "location": "Computation.iVerifyTheDownloadToWafer(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumFeature"
+          }
+        ]
+      }
+    ],
+    "name": "selenium data selection",
+    "description": "",
+    "id": "selenium-data-selection",
+    "keyword": "Feature",
+    "uri": "src/test/features/s_computation_flyerremoval.feature",
+    "tags": [
+      {
+        "name": "@SeleniumFeature",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "I am logged in and at the landing page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2744387300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am at the Login page",
+            "match": {
+              "location": "Authentication.i_am_at_the_Login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 186098900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter username of authorised user",
+            "match": {
+              "location": "Authentication.i_enter_username_of_authorised_user()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15066700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I see the username of authorised user in the username textbox",
+            "match": {
+              "location": "Authentication.iSeeTheUsernameOfAuthorisedUserInTheUsernameTextbox()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 173912800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter password of authorised user",
+            "match": {
+              "location": "Authentication.i_enter_password_of_authorised_user()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 93460800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click the login button",
+            "match": {
+              "location": "Authentication.iClickTheLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4627317000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I am at the Landing Page",
+            "match": {
+              "location": "DataSelection.iAmAtTheLandingPage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3077776900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseAnnotation.loadBrowser()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "select Data",
+        "description": "",
+        "id": "selenium-data-selection;select-data",
+        "after": [
+          {
+            "result": {
+              "duration": 652208500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BaseAnnotation.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2190849900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on the date range field",
+            "match": {
+              "location": "DataSelection.iClickOnTheDateRangeField()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2129999100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I see the date range picker opened",
+            "match": {
+              "location": "DataSelection.iSeeTheDateRangePickerOpened()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2247320100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I select start date \"2017-01-02 13:00\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2017-01-02 13:00",
+                  "offset": 21
+                }
+              ],
+              "location": "DataSelection.iSelectStartDate(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2191572500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I select end date \"2017-01-02 14:00\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2017-01-02 14:00",
+                  "offset": 19
+                }
+              ],
+              "location": "DataSelection.iSelectEndDate(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 103939300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I click the Data Selection confirmation button",
+            "match": {
+              "location": "DataSelection.iClickTheDataSelectionConfirmationButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2127543000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I see start date \"2017-01-02 13:00\" and end date \"2017-01-02 14:00\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2017-01-02 13:00",
+                  "offset": 18
+                },
+                {
+                  "val": "2017-01-02 14:00",
+                  "offset": 50
+                }
+              ],
+              "location": "DataSelection.iSeeStartDateAndEndDate(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2165781700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I select product \"Product_1X\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Product_1X",
+                  "offset": 18
+                }
+              ],
+              "location": "DataSelection.iSelectProduct(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2174270500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I select layer: \"Layer32\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Layer32",
+                  "offset": 17
+                }
+              ],
+              "location": "DataSelection.iSelectLayer(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2043378800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I see the selected product: \"Product_1X\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Product_1X",
+                  "offset": 29
+                }
+              ],
+              "location": "DataSelection.iSeeTheSelectedProduct(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2133887000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I see the selected layer: \"Layer32\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Layer32",
+                  "offset": 27
+                }
+              ],
+              "location": "DataSelection.iSeeTheSelectedLayer(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2108597300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I click the Submit button",
+            "match": {
+              "location": "DataSelection.iClickTheSubmitButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2100056900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I click the available filter options container header",
+            "match": {
+              "location": "DataSelection.iClickTheAvailableFilterOptionsContainerHeader()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2117266700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I see the expanded Filter Container with \"9\" filter options",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 42
+                }
+              ],
+              "location": "DataSelection.iSeeTheExpandedFilterContainerWithFilterOptions(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2085652100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I click the available filter options container header",
+            "match": {
+              "location": "DataSelection.iClickTheAvailableFilterOptionsContainerHeader()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2043828700,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I see the closed filter options container",
+            "match": {
+              "location": "DataSelection.iSeeTheClosedFilterOptionsContainer()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17373810900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I select points by rectangle starting from x: \"1\" y: \"1\" moving by x: \"963\" and y: \"268\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 47
+                },
+                {
+                  "val": "1",
+                  "offset": 54
+                },
+                {
+                  "val": "963",
+                  "offset": 71
+                },
+                {
+                  "val": "268",
+                  "offset": 84
+                }
+              ],
+              "location": "DataSelection.iSelectPointsByRectangleStartingFromXYMovingByXAndY(String,String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 251790000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I click on computation Page link",
+            "match": {
+              "location": "DataSelection.iClickOnComputationPageLink()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2127324700,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I am at the Computation page",
+            "match": {
+              "location": "Computation.iAmAtTheComputationPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2038257500,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I can see the Lot \"Lot6399\" in the treeview",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Lot6399",
+                  "offset": 19
+                }
+              ],
+              "location": "Computation.iCanSeeTheLotInTheTreeview(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2108219000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I can see the Wafer \"wafer.3152974802\" in lot \"Lot6399\" in the treeview",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974802",
+                  "offset": 21
+                },
+                {
+                  "val": "Lot6399",
+                  "offset": 47
+                }
+              ],
+              "location": "Computation.iCanSeeTheWaferInLotInTheTreeview(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2095897600,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I can see the Wafer \"wafer.3152974803\" in lot \"Lot6399\" in the treeview",
+            "match": {
+              "arguments": [
+                {
+                  "val": "wafer.3152974803",
+                  "offset": 21
+                },
+                {
+                  "val": "Lot6399",
+                  "offset": 47
+                }
+              ],
+              "location": "Computation.iCanSeeTheWaferInLotInTheTreeview(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumFeature"
+          }
+        ]
+      }
+    ],
+    "name": "selenium data selection",
+    "description": "",
+    "id": "selenium-data-selection",
+    "keyword": "Feature",
+    "uri": "src/test/features/s_dataselection.feature",
+    "tags": [
+      {
+        "name": "@SeleniumFeature",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

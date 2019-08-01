@@ -1,0 +1,41 @@
+.file-info {
+    display: flex;
+    background-color: #0E2844;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    height: 1.5em;
+    font-size: 1.3em;
+}
+
+.file-info-item {
+    display: flex;
+    padding-left: 1em;
+    padding-right: 1em;
+    white-space: nowrap;
+}
+
+.file-info {
+    display: flex;
+    justify-content:space-between;
+}
+
+.file-info-item-label {
+    padding-right: 0.5em;
+    white-space: nowrap;
+}
+.file-info-item-date {
+    white-space: nowrap;
+}
+
+.bamboo-available {
+    color: #68CA77;
+}
+
+.bamboo-not-available {
+    color: #C73F4B;
+}
+
+.bamboo-icon {
+    margin-left: 0.5em;
+}
