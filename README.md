@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/ArtemAlagizov/komkommer-test-results.svg?branch=master)](https://travis-ci.org/ArtemAlagizov/komkommer-test-results)
-[![Coverage Status](https://img.shields.io/coveralls/github/ArtemAlagizov/komkommer-test-results.svg)](https://coveralls.io/github/ArtemAlagizov/komkommer-test-results?branch=master)
+[![Build Status](https://travis-ci.org/ArtemAlagizov/cucumber-test-results-react.svg?branch=master)](https://travis-ci.org/ArtemAlagizov/cucumber-test-results-react)
+[![Coverage Status](https://img.shields.io/coveralls/github/ArtemAlagizov/cucumber-test-results-react.svg)](https://coveralls.io/github/ArtemAlagizov/cucumber-test-results-react?branch=master)
 
 
 * To install packages go with
