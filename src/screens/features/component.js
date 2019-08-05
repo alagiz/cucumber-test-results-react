@@ -107,7 +107,7 @@ class Features extends Component {
                 <div className="features">
                     <FeaturesHeader headerData={this.state.headerData}/>
                     <ExtraInfo extraInfo={extraInfo}/>
-                    <FeaturesInfoPanel filterData={this.filterData}/>
+                    <FeaturesInfoPanel filterData={this.filterData.bind(this)}/>
                     <FeatureList features={this.state.filteredFeatures}/>
                     <FileInfo fileInfo={fileInfo}/>
                 </div>

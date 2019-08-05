@@ -9,7 +9,7 @@ import InfoPanelLink from './backLink/component';
 class FeatureHeader extends Component {
     render() {
         const feature = this.props.feature || {featureName: '', testsPassed: false, duration: 0};
-        const {featureName, testsPassed, duration} = feature;
+        const {name, testsPassed, duration} = feature;
         const overallDuration = TimeUtils.convertNanosecondsToTime(duration);
         const iconName = testsPassed ? 'check-circle' : 'exclamation-circle';
         const iconClass = `${testsPassed ? 'tests-passed' : 'tests-failed'} icon`;
