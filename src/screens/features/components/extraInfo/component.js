@@ -5,7 +5,7 @@ import {clone, isEmpty, isNil} from 'ramda';
 import './style.css';
 import InfoTile from './infoTile/component';
 import ServiceHealth from './serviceHealth/component';
-const backendIp = process.env.REACT_APP_BACKEND_IP;
+const backendIp = process.env.REACT_APP_TB_TO_BE_OBSERVED_IP;
 const gatewayPort = process.env.REACT_APP_GATEWAY_PORT;
 const javaComputationPort = process.env.REACT_APP_JAVA_COMPUTATION_PORT;
 const overlayKpiPort = process.env.REACT_APP_OVERLAY_KPI_PORT;
