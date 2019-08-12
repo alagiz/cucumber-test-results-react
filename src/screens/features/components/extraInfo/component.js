@@ -15,6 +15,7 @@ const lisDataChannelServicePort = process.env.REACT_APP_LIS_DATA_CHANNEL_PORT;
 const screenshotPort = process.env.REACT_APP_SCREENSHOT_SERVICE_PORT;
 const reactPort = process.env.REACT_APP_REACT_PORT;
 const reactCaPort = process.env.REACT_APP_REAACT_CA_PORT;
+const customerProjectsPort = process.env.REACT_APP_CUSTOMER_PROJECTS_PORT;
 // const backendIp = 'localhost';
 
 class ExtraInfo extends Component {
@@ -82,6 +83,13 @@ class ExtraInfo extends Component {
                 healthy: false,
                 healthCheckUrl: `http://${backendIp}:${reactCaPort}/health`,
                 swaggerUrl: 'http://google.com'
+            },
+            {
+                title: 'customer projects',
+                id: 'customer_projects',
+                healthy: false,
+                healthCheckUrl: `http://${backendIp}:${customerProjectsPort}/health`,
+                swaggerUrl: `http://${backendIp}:${customerProjectsPort}/ui`
             }
         ]
     }
