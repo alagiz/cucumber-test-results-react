@@ -36,6 +36,6 @@ describe('features infoPanel rendering', () => {
         it('should render services-health-container', () => expect(wrapper.find('.services-health-container')).toHaveLength(1));
         it('should render service health title', () => expect(wrapper.find('.services-health-title')).toHaveLength(1));
         it('should render service health status container', () => expect(wrapper.find('.services-health-status-container')).toHaveLength(1));
-        it('should render ServiceHealth', () => expect(wrapper.find('ServiceHealth')).toHaveLength(9));
+        it('should render ServiceHealth', () => expect(wrapper.find('ServiceHealth')).toHaveLength(10));
     });
 });
