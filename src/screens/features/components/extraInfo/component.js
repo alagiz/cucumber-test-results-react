@@ -16,6 +16,7 @@ const screenshotPort = process.env.REACT_APP_SCREENSHOT_SERVICE_PORT;
 const reactPort = process.env.REACT_APP_REACT_PORT;
 const reactCaPort = process.env.REACT_APP_REACT_CA_PORT;
 const customerProjectsPort = process.env.REACT_APP_CUSTOMER_PROJECTS_PORT;
+const dataAssociationPort = process.env.REACT_APP_DATA_ASSOCIATION_PORT;
 // const backendIp = 'localhost';
 
 class ExtraInfo extends Component {
@@ -90,6 +91,13 @@ class ExtraInfo extends Component {
                 healthy: false,
                 healthCheckUrl: `http://${backendIp}:${customerProjectsPort}/health`,
                 swaggerUrl: `http://${backendIp}:${customerProjectsPort}/ui`
+            },
+            {
+                title: 'data association',
+                id: 'data_association',
+                healthy: false,
+                healthCheckUrl: `http://${backendIp}:${dataAssociationPort}/actuator/health`,
+                swaggerUrl: 'http://google.com'
             }
         ]
     }
