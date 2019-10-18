@@ -26,6 +26,8 @@ class Routes extends Component {
     downloadLatestFile() {
         const artifactUrl = `http://${backendIp}:${backendPort}/cucumber-report`;
         const dateTimeUrl = `http://${backendIp}:${backendPort}/cucumber-report/date-time`;
+        // const artifactUrl = `http://localhost:3036/cucumber-report`;
+        // const dateTimeUrl = `http://localhost:3036/cucumber-report/date-time`;
 
         lastChecked = moment();
 

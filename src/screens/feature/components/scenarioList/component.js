@@ -9,7 +9,8 @@ class ScenarioList extends Component {
         const scenarios = feature.elements;
         const scenarioList = scenarios.map((scenario, index) =>
             <Scenario key={`scenario ${index}`}
-                      scenario={scenario}/>);
+                      scenario={scenario}
+                      maxScenarioTime={feature.maxScenarioTime}/>);
 
         return (
             <div className="scenario-list-container">

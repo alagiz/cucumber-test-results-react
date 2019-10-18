@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Collapsible from 'react-collapsible';
+import {Tooltip} from 'antd';
 
 import './style.css';
 import TimeUtils from '../../../../../utils/timeUtils';
@@ -25,6 +26,7 @@ class Step extends Component {
         const stepStatusClass = step.status ? step.status : 'failed';
         const stepStatusIndicatorClass = `${stepStatusClass} rectangle`;
         const width = TimeUtils.getWidthBasedOnTimeRate(step.timeRate);
+        const stepTime = TimeUtils.convertNanosecondsToTime(step.timeRate * this.props.maxScenarioTime);
         const divStyle = {'maxWidth': width, 'minWidth': width};
         const stepNameDivStyle = {'maxWidth': `calc(100% - ${width} - 1em)`, 'minWidth': `calc(100% - ${width} - 1em)`};
         const stepDiv =
@@ -35,8 +37,9 @@ class Step extends Component {
                         <div className="step-name"
                              style={stepNameDivStyle}>{step.name}</div>
                     </div>
-                    <div className={stepStatusClass}
-                         style={divStyle}/>
+                    <Tooltip placement="left" title={stepTime}>
+                        <div className={stepStatusClass} style={divStyle}/>
+                    </Tooltip>
                 </div>
             </div>;
         const collapsibleStep =

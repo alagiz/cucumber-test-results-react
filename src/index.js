@@ -8,8 +8,9 @@ import Routes from './config/routes';
 const backendIp = process.env.REACT_APP_BACKEND_IP;
 const backendPort = process.env.REACT_APP_BACKEND_PORT;
 // const backendIp = 'localhost';
-// const backendPort = 8080;
+// const backendPort = 3036;
 const wsSourceUrl = `http://${backendIp}:${backendPort}/cucumber-websocket`;
+// const wsSourceUrl = `http://localhost:3036/cucumber-websocket`;
 const Stomp = require('stompjs');
 
 const routes = new Routes();
