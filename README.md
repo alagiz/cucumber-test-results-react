@@ -5,11 +5,11 @@
 
 frontend for [cucumber-test-results](https://github.com/ArtemAlagizov/cucumber-test-results)
 
-* To install packages go with
+* To install packages go with the command
   ```
   npm i
   ```
-* To run go with
+* To run go with the command
   ```
   npm start
   ```
