@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
-import 'react-circular-progressbar/dist/styles.css';
-import moment from 'moment-timezone';
-import FontAwesome from 'react-fontawesome';
+import React, {Component} from "react";
+import "react-circular-progressbar/dist/styles.css";
+import moment from "moment-timezone";
 
-import './style.css';
+import "./style.css";
 
 class FileInfo extends Component {
     render() {
@@ -14,9 +13,6 @@ class FileInfo extends Component {
             dateTimeOfDeployment: '01-01-2001T00:00:00'
         };
         const deploymentDateTime = moment.tz(dateTimeOfDeployment, 'Europe/Amsterdam').format(format);
-        const bambooAvailable = this.props.fileInfo.bambooAvailable;
-        const iconName = bambooAvailable ? 'check-circle' : 'exclamation-circle';
-        const iconClass = `${bambooAvailable ? 'bamboo-available' : 'bamboo-not-available'} icon`;
 
         return (
             <div className="file-info">
