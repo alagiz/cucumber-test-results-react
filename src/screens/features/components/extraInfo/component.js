@@ -34,7 +34,7 @@ class ExtraInfo extends Component {
                 id: 'java_computation',
                 healthy: false,
                 healthCheckUrl: `http://${backendIp}:${javaComputationPort}/actuator/health`,
-                swaggerUrl: 'http://google.com'
+                swaggerUrl: `http://${backendIp}:${javaComputationPort}/swagger-ui.html`
             },
             {
                 title: 'overlay kpi',
@@ -97,7 +97,7 @@ class ExtraInfo extends Component {
                 id: 'data_association',
                 healthy: false,
                 healthCheckUrl: `http://${backendIp}:${dataAssociationPort}/actuator/health`,
-                swaggerUrl: 'http://google.com'
+                swaggerUrl: `http://${backendIp}:${dataAssociationPort}/swagger-ui.html`
             }
         ]
     }
