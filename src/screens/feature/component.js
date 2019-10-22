@@ -37,6 +37,7 @@ class Feature extends Component {
         const feature = isNil(this.props.location) ? this.state.feature : this.props.location.feature;
         const fileInfo = {
             lastModified: isNil(this.props.data) ? '' : this.props.data.lastModified,
+            deploymentData: isNil(this.props.data) ? '' : this.props.data.deploymentData,
             lastChecked: isNil(this.props.data) ? '' : this.props.data.lastChecked,
             bambooAvailable: isNil(this.props.data) ? '' : this.props.data.bambooAvailable
         };

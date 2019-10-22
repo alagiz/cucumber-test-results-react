@@ -72,6 +72,7 @@ class Features extends Component {
     render() {
         const fileInfo = {
             lastModified: this.props.data.lastModified,
+            deploymentData: this.props.data.deploymentData,
             lastChecked: this.props.data.lastChecked,
             bambooAvailable: this.props.data.bambooAvailable
         };
