@@ -17,8 +17,6 @@ class FileInfo extends Component {
         const bambooAvailable = this.props.fileInfo.bambooAvailable;
         const iconName = bambooAvailable ? 'check-circle' : 'exclamation-circle';
         const iconClass = `${bambooAvailable ? 'bamboo-available' : 'bamboo-not-available'} icon`;
-        const iconToShow = <FontAwesome className={iconClass}
-                                        name={iconName}/>;
 
         return (
             <div className="file-info">
