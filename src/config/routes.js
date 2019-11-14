@@ -18,18 +18,12 @@ let csharpCoveragePercentage = 'Not available';
 let rCoveragePercentage = 'Not available';
 let duplicatesNumber = 'Not available';
 let issuesNumber = 'Not available';
-const backendIp = process.env.REACT_APP_BACKEND_IP;
-const backendPort = process.env.REACT_APP_BACKEND_PORT;
-// const backendIp = 'localhost';
-// const backendPort = 8081;
 
 class Routes extends Component {
     downloadLatestFile() {
-        const artifactUrl = `http://${backendIp}:${backendPort}/cucumber-report`;
-        const dateTimeUrl = `http://${backendIp}:${backendPort}/cucumber-report/date-time`;
-        const deploymentDataUrl = `http://${backendIp}:${backendPort}/deployment-data`;
-        // const artifactUrl = `http://localhost:3036/cucumber-report`;
-        // const dateTimeUrl = `http://localhost:3036/cucumber-report/date-time`;
+        const artifactUrl =`http://${window._env_.BACKEND_URL}/cucumber-report`;
+        const dateTimeUrl = `http://${window._env_.BACKEND_URL}/cucumber-report/date-time`;
+        const deploymentDataUrl = `http://${window._env_.BACKEND_URL}/deployment-data`;
 
         lastChecked = moment();
 

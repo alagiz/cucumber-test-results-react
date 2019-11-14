@@ -5,12 +5,7 @@ import './index.css';
 import 'font-awesome/css/font-awesome.min.css';
 import Routes from './config/routes';
 
-const backendIp = process.env.REACT_APP_BACKEND_IP;
-const backendPort = process.env.REACT_APP_BACKEND_PORT;
-// const backendIp = 'localhost';
-// const backendPort = 8081;
-const wsSourceUrl = `http://${backendIp}:${backendPort}/cucumber-websocket`;
-// const wsSourceUrl = `http://localhost:8081/cucumber-websocket`;
+const wsSourceUrl = `http://${window._env_.BACKEND_URL}/cucumber-websocket`;
 const Stomp = require('stompjs');
 
 const routes = new Routes();
@@ -21,7 +16,7 @@ const renderRoutes = () => routes.getRoutes().then(routes => {
     );
 });
 const onMessageReceived = message => {
-    console.log(`Got a message from ${backendIp}:${backendPort} through a websocket connection! It says ${message}`);
+    console.log(`Got a message from ${window._env_.BACKEND_URL} through a websocket connection! It says ${message}`);
 
     renderRoutes();
 };
