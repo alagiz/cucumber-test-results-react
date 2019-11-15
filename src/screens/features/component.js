@@ -10,6 +10,7 @@ import FileInfo from '../../ui/components/fileInfo/component';
 import ExtraInfo from './components/extraInfo/component';
 import CircularProgressbar from 'react-circular-progressbar';
 import TimeUtils from '../../utils/timeUtils';
+import whiteRabbitLogo from "../../unstable_hare.png";
 
 class Features extends Component {
     keyMap = {showCucumberLogo: 'alt+c', showWhiteRabbitLogo: 'alt+w'};
@@ -77,10 +78,10 @@ class Features extends Component {
             bambooAvailable: this.props.data.bambooAvailable
         };
         const headerData = this.state.headerData || {
-                overallDuration: 0,
-                featuresNumber: 0,
-                numberOfPassedFeatures: 0
-            };
+            overallDuration: 0,
+            featuresNumber: 0,
+            numberOfPassedFeatures: 0
+        };
         const overallDuration = TimeUtils.convertNanosecondsToTime(headerData.overallDuration);
         const featuresNumber = headerData.featuresNumber;
         const numberOfPassedFeatures = headerData.numberOfPassedFeatures;
@@ -103,6 +104,13 @@ class Features extends Component {
             }
         ];
 
+        const unstableHare = <div className="unstable-logo-container">
+            <img src={whiteRabbitLogo}
+                 className="unstable-logo"
+                 hidden={!this.state.headerData.whiteRabbitLogoVisible}
+                 alt={whiteRabbitLogo}/>
+        </div>;
+
         return (
             <HotKeys keyMap={this.keyMap} handlers={this.handlers}>
                 <div className="features">
@@ -111,6 +119,7 @@ class Features extends Component {
                     <FeaturesInfoPanel filterData={this.filterData.bind(this)}/>
                     <FeatureList features={this.state.filteredFeatures}/>
                     <FileInfo fileInfo={fileInfo}/>
+                    {unstableHare}
                 </div>
             </HotKeys>
         );

@@ -28,14 +28,6 @@
     margin-left: -3em;
 }
 
-.white-rabbit-logo {
-    max-height: 232%;
-    position: relative;
-    width: 6em;
-    top: -0.5em;
-    margin-left: 0em;
-}
-
 .features-header-extra-info-asml-logo {
     display: flex;
     justify-content: flex-end;
