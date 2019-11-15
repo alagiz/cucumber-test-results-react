@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {HotKeys} from "react-hotkeys";
 import 'react-circular-progressbar/dist/styles.css';
 
 import './style.css';
@@ -31,7 +30,7 @@ class FeaturesHeader extends Component {
                                  className="asml-logo"
                                  alt={asmlLogo}/>
                         </div>
-                        <div> Test bench {process.env.REACT_APP_TESTBENCH_NUMBER} </div>
+                        <div> Test bench {window._env_.TESTBENCH_NUMBER} </div>
                     </div>
                 </div>
             </div>
