@@ -5,106 +5,30 @@ import {clone, isEmpty, isNil} from 'ramda';
 import './style.css';
 import InfoTile from './infoTile/component';
 import ServiceHealth from './serviceHealth/component';
-const backendIp = process.env.REACT_APP_TB_TO_BE_OBSERVED_IP;
-const gatewayPort = process.env.REACT_APP_GATEWAY_PORT;
-const javaComputationPort = process.env.REACT_APP_JAVA_COMPUTATION_PORT;
-const overlayKpiPort = process.env.REACT_APP_OVERLAY_KPI_PORT;
-const authenticationPort = process.env.REACT_APP_AUTHENTICATION_PORT;
-const snapshotServicePort = process.env.REACT_APP_SNAPSHOT_SERVICE_PORT;
-const lisDataChannelServicePort = process.env.REACT_APP_LIS_DATA_CHANNEL_PORT;
-const screenshotPort = process.env.REACT_APP_SCREENSHOT_SERVICE_PORT;
-const reactPort = process.env.REACT_APP_REACT_PORT;
-const reactCaPort = process.env.REACT_APP_REACT_CA_PORT;
-const customerProjectsPort = process.env.REACT_APP_CUSTOMER_PROJECTS_PORT;
-const dataAssociationPort = process.env.REACT_APP_DATA_ASSOCIATION_PORT;
-// const backendIp = 'localhost';
 
 class ExtraInfo extends Component {
     state = {
-        services: [
-            {
-                title: 'gateway',
-                id: 'gateway',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${gatewayPort}/health`,
-                swaggerUrl: 'http://google.com'
-            },
-            {
-                title: 'java computation',
-                id: 'java_computation',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${javaComputationPort}/actuator/health`,
-                swaggerUrl: `http://${backendIp}:${javaComputationPort}/swagger-ui.html`
-            },
-            {
-                title: 'overlay kpi',
-                id: 'overlay_kpi',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${overlayKpiPort}/health`,
-                swaggerUrl: `http://${backendIp}:${overlayKpiPort}/ui`
-            },
-            {
-                title: 'authentication',
-                id: 'authentication',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${authenticationPort}/health`,
-                swaggerUrl: 'http://google.com'
-            },
-            {
-                title: 'snapshot service',
-                id: 'snapshot_service',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${snapshotServicePort}/health`,
-                swaggerUrl: 'http://google.com'
-            },
-            {
-                title: 'lis data channel service',
-                id: 'lis_data_channel_service',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${lisDataChannelServicePort}/health`,
-                swaggerUrl: 'http://google.com'
-            },
-            {
-                title: 'screenshot service',
-                id: 'screenshot_service',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${screenshotPort}/health`,
-                swaggerUrl: 'http://google.com'
-            },
-            {
-                title: 'react',
-                id: 'react',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${reactPort}/health`,
-                swaggerUrl: 'http://google.com'
-            },
-            {
-                title: 'react ca',
-                id: 'react_ca',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${reactCaPort}/health`,
-                swaggerUrl: 'http://google.com'
-            },
-            {
-                title: 'customer projects',
-                id: 'customer_projects',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${customerProjectsPort}/health`,
-                swaggerUrl: `http://${backendIp}:${customerProjectsPort}/ui`
-            },
-            {
-                title: 'data association',
-                id: 'data_association',
-                healthy: false,
-                healthCheckUrl: `http://${backendIp}:${dataAssociationPort}/actuator/health`,
-                swaggerUrl: `http://${backendIp}:${dataAssociationPort}/swagger-ui.html`
-            }
-        ]
+        services: [],
+        healthInterval: null
+    }
+
+    setHealthFetching(healthMonitoringServiceList) {
+        this.setState({services: healthMonitoringServiceList}, () => {
+            clearInterval(this.state.healthInterval);
+
+            this.fetchHealth();
+            this.fetchHealthRegularly();
+        });
     }
 
     componentDidMount() {
-        this.fetchHealth();
-        this.fetchHealthRegularly();
+        this.setHealthFetching(this.props.extraInfo.healthMonitoringServiceList);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        const newExtraInfo = nextProps.extraInfo;
+
+        this.setHealthFetching(newExtraInfo.healthMonitoringServiceList);
     }
 
     fetchHealth = () => {
@@ -127,13 +51,15 @@ class ExtraInfo extends Component {
     }
 
     fetchHealthRegularly = () => {
-        setInterval(() => {
-            this.fetchHealth();
-        }, 5 * 1000);
+        this.setState({
+            healthInterval: setInterval(() => {
+                this.fetchHealth();
+            }, 5 * 1000)
+        });
     }
 
     render() {
-        const extraInfo = this.props.extraInfo || [];
+        const extraInfo = this.props.extraInfo.testsDetails || [];
         const infoTiles = extraInfo.map((info, index) => <InfoTile key={index} infoToDisplay={info}/>);
         const services = isEmpty(this.state.services) ? [] : this.state.services;
         const serviceHealthElements = services.map((service, index) => <ServiceHealth key={index} service={service}/>);

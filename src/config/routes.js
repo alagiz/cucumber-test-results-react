@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import moment from "moment";
+import {isNil} from "ramda";
 
 import Feature from "../screens/feature/component";
 import Validator from "../validation/validator";
@@ -12,18 +13,16 @@ import axios from "axios";
 let exampleData = [];
 let lastModified = null;
 let deploymentData = null;
+let healthMonitoringServiceList = null;
 let lastChecked = null;
 let bambooAvailable = true;
-let csharpCoveragePercentage = 'Not available';
-let rCoveragePercentage = 'Not available';
-let duplicatesNumber = 'Not available';
-let issuesNumber = 'Not available';
 
 class Routes extends Component {
     downloadLatestFile() {
-        const artifactUrl =`http://${window._env_.BACKEND_URL}/cucumber-report`;
+        const artifactUrl = `http://${window._env_.BACKEND_URL}/cucumber-report`;
         const dateTimeUrl = `http://${window._env_.BACKEND_URL}/cucumber-report/date-time`;
         const deploymentDataUrl = `http://${window._env_.BACKEND_URL}/deployment-data`;
+        const healthMonitoringServiceListUrl = `http://${window._env_.BACKEND_URL}/health-monitoring-services`;
 
         lastChecked = moment();
 
@@ -45,9 +44,12 @@ class Routes extends Component {
 
                 deploymentData = {
                     releaseVersion: releaseVersion,
-                    dateTimeOfDeployment: moment(dateTimeOfDeployment, 'DD-MM-YYYYTHH:mm:ss')
+                    dateTimeOfDeployment: isNil(dateTimeOfDeployment) ? '' : moment(dateTimeOfDeployment, 'DD-MM-YYYYTHH:mm:ss')
                 }
+
+                return axios.get(healthMonitoringServiceListUrl);
             })
+            .then(response => healthMonitoringServiceList = response.data)
             .catch(error => console.log(error));
     }
 
@@ -61,14 +63,9 @@ class Routes extends Component {
                 data: exampleData,
                 lastModified: lastModified,
                 deploymentData: deploymentData,
+                healthMonitoringServiceList: healthMonitoringServiceList,
                 lastChecked: lastChecked,
-                bambooAvailable: bambooAvailable,
-                csharpCoveragePercentage: csharpCoveragePercentage,
-                rCoveragePercentage: rCoveragePercentage,
-                staticCodeAnalysisResults: {
-                    duplicatesNumber: duplicatesNumber,
-                    issuesNumber: issuesNumber
-                }
+                bambooAvailable: bambooAvailable
             };
             const featuresRoute = isIncomingDataValid ?
                 <Route exact

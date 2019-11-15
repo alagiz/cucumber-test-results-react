@@ -21,7 +21,7 @@ class Features extends Component {
                 featuresNumber: this.state.headerData.featuresNumber,
                 numberOfPassedFeatures: this.state.headerData.numberOfPassedFeatures,
                 cucumberLogoVisible: !this.state.headerData.cucumberLogoVisible,
-                whiteRabbitLogoVisible: this.state.headerData.whiteRabbitLogoVisible
+                unstableLogoVisible: this.state.headerData.unstableLogoVisible
             }
         }),
         showWhiteRabbitLogo: () => this.setState({
@@ -30,7 +30,7 @@ class Features extends Component {
                 featuresNumber: this.state.headerData.featuresNumber,
                 numberOfPassedFeatures: this.state.headerData.numberOfPassedFeatures,
                 cucumberLogoVisible: this.state.headerData.cucumberLogoVisible,
-                whiteRabbitLogoVisible: !this.state.headerData.whiteRabbitLogoVisible
+                unstableLogoVisible: !this.state.headerData.unstableLogoVisible
             }
         })
     };
@@ -41,14 +41,11 @@ class Features extends Component {
             featuresNumber: 0,
             numberOfPassedFeatures: 0,
             cucumberLogoVisible: false,
-            whiteRabbitLogoVisible: false
+            unstableLogoVisible: false
         },
         filteredFeatures: [],
         originalFeatures: [],
-        data: this.props.data.data,
-        csharpCoveragePercentage: this.props.data.csharpCoveragePercentage,
-        rCoveragePercentage: this.props.data.rCoveragePercentage,
-        staticCodeAnalysisResults: this.props.data.staticCodeAnalysisResults
+        data: this.props.data.data
     };
 
     componentWillMount() {
@@ -63,10 +60,7 @@ class Features extends Component {
             headerData: headerData,
             filteredFeatures: features,
             originalFeatures: features,
-            data: nextProps.data.data,
-            csharpCoveragePercentage: nextProps.data.csharpCoveragePercentage,
-            rCoveragePercentage: nextProps.data.rCoveragePercentage,
-            staticCodeAnalysisResults: nextProps.data.staticCodeAnalysisResults
+            data: nextProps.data.data
         });
     }
 
@@ -93,21 +87,24 @@ class Features extends Component {
                                  text={circularIndicatorText}/>
         </div>;
 
-        const extraInfo = [
-            {
-                title: 'overall results',
-                content: circularIndicator
-            },
-            {
-                title: 'overall duration',
-                content: <div className="info-tile-bottom-text">{overallDuration}</div>
-            }
-        ];
+        const extraInfo = {
+            testsDetails: [
+                {
+                    title: 'overall results',
+                    content: circularIndicator
+                },
+                {
+                    title: 'overall duration',
+                    content: <div className="info-tile-bottom-text">{overallDuration}</div>
+                }
+            ],
+            healthMonitoringServiceList: this.props.data.healthMonitoringServiceList || []
+        };
 
         const unstableHare = <div className="unstable-logo-container">
             <img src={whiteRabbitLogo}
                  className="unstable-logo"
-                 hidden={!this.state.headerData.whiteRabbitLogoVisible}
+                 hidden={!this.state.headerData.unstableLogoVisible}
                  alt={whiteRabbitLogo}/>
         </div>;
 
