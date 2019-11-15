@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {isNil} from 'ramda';
 import 'react-circular-progressbar/dist/styles.css';
 
 import './style.css';
@@ -8,6 +9,7 @@ import asmlLogo from '../../../../asml_logo.png';
 class FeaturesHeader extends Component {
     render() {
         const headerData = this.props.headerData || {cucumberLogoVisible: false};
+        const testBenchNumber = isNil(window._env_) ? '' : window._env_.TESTBENCH_NUMBER;
 
         return (
             <div className="features-header">
@@ -30,7 +32,7 @@ class FeaturesHeader extends Component {
                                  className="asml-logo"
                                  alt={asmlLogo}/>
                         </div>
-                        <div> Test bench {window._env_.TESTBENCH_NUMBER} </div>
+                        <div> Test bench {testBenchNumber} </div>
                     </div>
                 </div>
             </div>

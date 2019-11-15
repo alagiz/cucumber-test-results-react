@@ -22,7 +22,9 @@ class ExtraInfo extends Component {
     }
 
     componentDidMount() {
-        this.setHealthFetching(this.props.extraInfo.healthMonitoringServiceList);
+        const extraInfo = this.props.extraInfo || {healthMonitoringServiceList: []};
+
+        this.setHealthFetching(extraInfo.healthMonitoringServiceList);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -59,9 +61,10 @@ class ExtraInfo extends Component {
     }
 
     render() {
-        const extraInfo = this.props.extraInfo.testsDetails || [];
-        const infoTiles = extraInfo.map((info, index) => <InfoTile key={index} infoToDisplay={info}/>);
-        const services = isEmpty(this.state.services) ? [] : this.state.services;
+        const extraInfo = this.props.extraInfo || {testsDetails: []};
+        const testsDetails = extraInfo.testsDetails || [];
+        const infoTiles = testsDetails.map((info, index) => <InfoTile key={index} infoToDisplay={info}/>);
+        const services = isEmpty(this.state.services) || isNil(this.state.services) ? [] : this.state.services;
         const serviceHealthElements = services.map((service, index) => <ServiceHealth key={index} service={service}/>);
 
         return (
