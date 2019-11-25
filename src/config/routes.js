@@ -16,13 +16,15 @@ let deploymentData = null;
 let healthMonitoringServiceList = null;
 let lastChecked = null;
 let bambooAvailable = true;
+const backendUrl = window._env_.BACKEND_URL;
+// const backendUrl = "localhost:3036";
 
 class Routes extends Component {
     downloadLatestFile() {
-        const artifactUrl = `http://${window._env_.BACKEND_URL}/cucumber-report`;
-        const dateTimeUrl = `http://${window._env_.BACKEND_URL}/cucumber-report/date-time`;
-        const deploymentDataUrl = `http://${window._env_.BACKEND_URL}/deployment-data`;
-        const healthMonitoringServiceListUrl = `http://${window._env_.BACKEND_URL}/health-monitoring-services`;
+        const artifactUrl = `http://${backendUrl}/cucumber-report`;
+        const dateTimeUrl = `http://${backendUrl}/cucumber-report/date-time`;
+        const deploymentDataUrl = `http://${backendUrl}/deployment-data`;
+        const healthMonitoringServiceListUrl = `http://${backendUrl}/health-monitoring-services`;
 
         lastChecked = moment();
 
