@@ -1,4 +1,4 @@
-import {clone, filter, juxt, max} from 'ramda';
+import {clone, filter, juxt} from 'ramda';
 
 const filterKeyMap = {
     passed: feature => feature.testsPassed === true,
@@ -107,7 +107,7 @@ class DataHandler {
     }
 
     static setMaxScenarioTimePerFeature() {
-        const getMaxScenarioTime = elements => elements.length === 1 ? elements[0].duration : max(...elements.map(element => element.duration));
+        const getMaxScenarioTime = elements => elements.length === 1 ? elements[0].duration : Math.max(...elements.map(element => element.duration));
 
         return features => features.map(feature => feature.maxScenarioTime = getMaxScenarioTime(feature.elements));
     }
