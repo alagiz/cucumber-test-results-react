@@ -6,7 +6,7 @@
   "dependencies": {
     "ajv": "^6.5.2",
     "antd": "^3.24.1",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "coveralls": "^3.0.2",
     "downloadjs": "^1.4.7",
     "enzyme": "^3.3.0",
